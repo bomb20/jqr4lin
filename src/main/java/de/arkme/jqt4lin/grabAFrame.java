@@ -28,12 +28,12 @@ import au.edu.jcu.v4l4j.CaptureCallback;
  * @author vincent
  */
 public class grabAFrame {
-    private static Object shot(String myVideoDevice){
+    private static VideoFrame shot(String myVideoDevice) throws V4L4JException{
         VideoDevice vid = new VideoDevice(myVideoDevice);
-        Object img = vid.getRawFrameGrabber(800, 448, 0, 0);
+        VideoFrame img = vid.getRawFrameGrabber(800, 448, 0, 0);
         return img;
     }
-    public void exportShot(String myVideoDevice, String path){
+    public void exportShot(String myVideoDevice, String path) throws V4L4JException{
         Object shot = shot(myVideoDevice);
         //to-do: write output into file
     }    

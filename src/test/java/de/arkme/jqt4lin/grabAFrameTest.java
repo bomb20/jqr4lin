@@ -60,5 +60,11 @@ public class grabAFrameTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    public void testShot() {
+        System.out.println("shot");
+        String myVideoDevice = "/dev/video0";
+        grabAFrame shotInstance = new grabAFrame();
+        shotInstance.shot(myVideoDevice);
+    }
     
 }
